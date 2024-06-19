@@ -8,10 +8,10 @@ spec:
     server: 'https://kubernetes.default.svc'
   project: test-project
   source:
-    - repoURL: 'https://github.com/benrieger-mend/argocd-helm-test.git'
-      path: helm-charts/test-chart
-      targetRevision: main
-      helm:
-        releaseName: main-release
-        valueFiles:
-        - values/values.yaml
+    repoURL: 'https://github.com/benrieger-mend/argocd-helm-test.git'
+    path: helm-charts/test-chart
+    targetRevision: main
+    helm:
+      releaseName: main-release
+      valueFiles:
+      - values/values.yaml
