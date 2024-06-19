@@ -9,7 +9,7 @@ spec:
   project: test-project
   source:
     repoURL: 'https://github.com/benrieger-mend/argocd-helm-test.git'
-    path: "helm-charts/test-chart"
+    path: helm-charts/test-chart
     targetRevision: main
     helm:
       releaseName: main-release
