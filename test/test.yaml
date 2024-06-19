@@ -14,7 +14,7 @@ spec:
       helm:
         releaseName: main-release
         valueFiles:
-        - $values/helm-charts/test-chart/values2.yaml
+        - $values/helm-charts/test-chart/values.yaml
     - repoURL: 'https://github.com/benrieger-mend/argocd-helm-test.git'
       targetRevision: main
       ref: values
