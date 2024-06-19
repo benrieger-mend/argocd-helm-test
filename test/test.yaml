@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: test-app
+  namespace: test
+spec:
+  destination:
+    server: 'https://kubernetes.default.svc'
+  project: test-project
+  sources:
+    - repoURL: 'https://github.com/benrieger-mend/argocd-helm-test'
+      path: helm-charts/test-chart
+      targetRevision: main
+      helm:
+        releaseName: main
+        valueFiles:
+        - $values/helm-charts/test-chart/values2.yaml
+    - repoURL: 'https://github.com/benrieger-mend/argocd-helm-test'
+      targetRevision: main
+      ref: values
