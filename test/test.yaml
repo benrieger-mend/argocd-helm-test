@@ -7,7 +7,7 @@ spec:
   destination:
     server: 'https://kubernetes.default.svc'
   project: test-project
-  sources:
+  source:
     - repoURL: 'https://github.com/benrieger-mend/argocd-helm-test.git'
       path: helm-charts/test-chart
       targetRevision: main
@@ -15,6 +15,3 @@ spec:
         releaseName: main-release
         valueFiles:
         - values/values.yaml
-    - repoURL: 'https://github.com/benrieger-mend/argocd-helm-test.git'
-      targetRevision: main
-      ref: values
