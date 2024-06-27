@@ -1,3 +1,7 @@
 {
   "settingsInheritedFrom": "benrieger-mend/whitesource-config@main",
-  "
+  "scanSettings": {
+    "baseBranches": ["main"]
+  }
+}
+        
